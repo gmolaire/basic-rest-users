@@ -12,4 +12,61 @@ The application will provide [at least] the following endpoints:
 * GET /users/{id}
 * PUT /users
 
-User information are served from memory.
+- User information are served from memory
+- The application context endpoint is /basic-rest-users
+
+## Usage example ##
+Using any HTTP client application, you can try the below.
+
+### Create a user
+#### Request
+```
+POST <URL>/basic-rest-users/users
+{
+	"id" : "gumol",
+	"lastName" : "almo",
+	"location" : "somewhere in mtl"
+}
+```
+#### Response
+201 Created
+```
+{
+  "firstName": null,
+  "lastName": "almo",
+  "email": null,
+  "location": "somewhere in mtl",
+  "_links": {
+    "self": {
+      "href": "<URL>/basic-rest-users/users/gumol"
+    },
+    "user": {
+      "href": "<URL>/basic-rest-users/users/gumol"
+    }
+  }
+}
+```
+
+### Get a user
+#### Request
+```
+GET <URL>/basic-rest-users/users/gumol
+```
+#### Response
+200 OK
+```
+{
+  "firstName": null,
+  "lastName": "almo",
+  "email": null,
+  "location": "somewhere in mtl",
+  "_links": {
+    "self": {
+      "href": "<URL>/basic-rest-users/users/gumol"
+    },
+    "user": {
+      "href": "<URL>/basic-rest-users/users/gumol"
+    }
+  }
+}
+```

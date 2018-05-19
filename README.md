@@ -12,8 +12,12 @@ The application will provide [at least] the following endpoints:
 * GET /users/{id}
 * PUT /users
 
-- User information are served from memory
-- The application context endpoint is /basic-rest-users
+Moreover:
+
+1- User information are served from memory
+2- The application context endpoint is /basic-rest-users
+3- You get responses with state information defined by HATEOAS
+4- Pagination is supported
 
 ## Usage example ##
 Using any HTTP client application, you can try the below.
